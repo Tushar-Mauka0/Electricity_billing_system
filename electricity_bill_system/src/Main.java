@@ -1,0 +1,17 @@
+import ui.MainFrame;
+
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        // Set Look and Feel to System native default
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception ignored) {}
+
+        SwingUtilities.invokeLater(() -> {
+            MainFrame frame = new MainFrame();
+            frame.setVisible(true);
+        });
+    }
+}
